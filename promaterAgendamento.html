@@ -1,0 +1,2055 @@
+<link href="https://www.hospitalmetropolitano.com.br/themes/custom/particle/apps/drupal/favicon.png" rel="shortcut icon"
+    type="image/png" />
+<link href="https://fonts.googleapis.com" rel="preconnect" />
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+<link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/css/selectize.default.css" rel="stylesheet" />
+<link href="./main.css" rel="stylesheet" type="text/css" />
+<main class="pre-agendamento">
+    <div class="container">
+        <header class="pre-agendamento__header"><a href="http://www.promater.com/"><img alt="Américas"
+                    src="http://www.promater.com/public/img/logo_promater.svg" style="max-width:78%;" /></a>
+            <h1>Bem-vindo ao serviço de agendamento de exames e consultas.</h1>
+
+            <p>Em apenas 5 passos, sua solicitação será concluída.</p>
+            <button class="button" data-init="" type="button">Agendar</button>
+        </header>
+
+        <section class="pre-agendamento__box"><button data-prev="" type="button"><img alt="Arrow"
+                    src="https://cdn1-originals.webdamdb.com/13725_134914068?cache=1656430601&amp;response-content-disposition=inline;filename=back_0.png&amp;Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9jZG4xLW9yaWdpbmFscy53ZWJkYW1kYi5jb20vMTM3MjVfMTM0OTE0MDY4P2NhY2hlPTE2NTY0MzA2MDEmcmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj1pbmxpbmU7ZmlsZW5hbWU9YmFja18wLnBuZyIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MjE0NzQxNDQwMH19fV19&amp;Signature=W14PkawCj6JAoCSo8NwI2H7PD3m8-qCEuSqOhMDBICX7WjEC3WWelhKys2Jvl15d-KZ~WEhFsz01Fx2bLk7EGcHm7KkQE7jwTT-cZvtrzzUuyNF2m63B8FwNz5wUet54054EvKbm5~Kvqc7T65y5BPIZ0aU1m311-D5GvKLg~PaZcmUTW~GBJiWj0RD2~5VmV637ZdRRc6ZxGl6xkWgeZVD0tfTHiTn57ArueTWKz3HKPSCNP0w4yCfdC0J7LXoNJwkvtAsMB4xETTH8X5TxMPWoPcFEfBDmM7aVKLunjbG6Wu3L7juI2GDz27flXgw4c4R9mog4IlEOymohjn1ERw__&amp;Key-Pair-Id=APKAI2ASI2IOLRFF2RHA" /></button>
+
+            <form class="pre-agendamento__box__contents" id="form">
+                <article
+                    class="pre-agendamento__box__contents__content pre-agendamento__box__contents__content--necessidade">
+                    <header>
+                        <h2>Selecione a<br />
+                            sua necessidade.</h2>
+
+                        <aside><label for="consulta"><input checked="checked" id="consulta" name="necessidade"
+                                    type="radio" value="Consulta" /> <span>Consulta</span> </label> <label for="exame">
+                                <input id="exame" name="necessidade" type="radio" value="Exame" /> <span>Exame</span>
+                            </label></aside>
+                    </header>
+
+                    <section class="pre-agendamento__box__contents__content--necessidade__consulta"><select
+                            id="especialidade" multiple="multiple">
+                            <option value="Cirurgia Aparelho Digestivo">Cirurgia Aparelho Digestivo</option>
+                            <option value="Cirurgia Buco Maxilo Facial">Cirurgia Buco Maxilo Facial</option>
+                            <option value="Cirurgia Ortopédica">Cirurgia Ortopédica</option>
+                            <option value="Cirurgia Ortopédica de Coluna">Cirurgia Ortopédica de Coluna</option>
+                            <option value="Gastroenterologia">Gastroenterologia</option>
+                            <option value="Ginecologia/obstetrícia">Ginecologia/obstetrícia</option>
+                            <option value="Nefrologia">Nefrologia</option>
+                            <option value="Neurologia">Neurologia</option>
+                            <option value="Ortopedia e Traumatologia ">Ortopedia e Traumatologia </option>
+                            <option value="Urologia">Urologia</option>
+                        </select>
+
+                        <h5 data-aviso="especialidade">Selecione uma especialidade</h5>
+                    </section>
+
+                    <section class="pre-agendamento__box__contents__content--necessidade__exame">
+                        <section><select id="tipoExame" multiple="multiple">
+                                <option value="">Pesquisar</option>
+                                <option value="Angiotomografia ">Angiotomografia </option>
+                                <option value="Mapa">Mapa </option>
+                                <option value="Tomografia Com Sedação">Tomografia Com Sedação</option>
+                                <option value="Tomografia Computadorizada">Tomografia Computadorizada</option>
+                                <option value="Ultrassonografia">Ultrassonografia</option>
+                                <option value="Ultrassonografia Com Doppler Color">Ultrassonografia Com Doppler Color
+                                </option>
+                            </select></section>
+
+                        <h5 data-aviso="tipoExame">Selecione o tipo de exame</h5>
+
+                        <p style="margin-bottom: 1rem;">Anexe aqui seu pedido médico ou algum outro documento necessário
+                            para a realização do exame.</p>
+                        <label class="custom-file-exameUpload" for="exameUpload"
+                            style="border-radius: 20px;padding:3px 1rem 3px 2rem;cursor:pointer;background:#e8e8e8 url(https://cdn1-originals.webdamdb.com/13725_134912591?cache=1656426931&amp;response-content-disposition=inline;filename=pasteUpload.png&amp;Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9jZG4xLW9yaWdpbmFscy53ZWJkYW1kYi5jb20vMTM3MjVfMTM0OTEyNTkxP2NhY2hlPTE2NTY0MjY5MzEmcmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj1pbmxpbmU7ZmlsZW5hbWU9cGFzdGVVcGxvYWQucG5nIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoyMTQ3NDE0NDAwfX19XX0_&amp;Signature=BjqvtFeli4OOJjBLUiUAT9vbQ0EvPlK8zJT7oj2pnY7FRHYvXq72t6lPJdo7j2aizGHjkI1AV1Z5xB05AwlHZ0TGUu-oG8wsH4Z015VaQ8YGG4z4dDiDVNgjT-A0H1DIoeSkNku48QXkODRsJh8x7hK9nbyrorRS6s3b~rs0KcWSwaQ9Wz5vSRkBF8co3wMERwz4BP6RhabU3kMYdNKE2inGHc9nUEl2ag~CX0yOt889wBVYVTiIduq3LT~CT2N0Oc-U4oaq7rH6VPteOmjQePmwM6WxQ1cR3-iO1F5chGq92QQkKNgac6HzFVRwn8--igpl2nwZmlqmjNWL0EjYvQ__&amp;Key-Pair-Id=APKAI2ASI2IOLRFF2RHA) left/contain no-repeat;">Escolher
+                            Arquivo </label> <input id="exameUpload" name="exameUpload" type="file" />
+                        <p id="UploadImgName" style="display:inline;">&nbsp;</p>
+
+                        <h5 data-aviso="arquivo" id="dataPreSpan">Anexe um arquivo</h5>
+                    </section>
+                </article>
+
+                <article
+                    class="pre-agendamento__box__contents__content pre-agendamento__box__contents__content--convenio">
+                    <h2>Selecione abaixo o seu convênio.</h2>
+                    <select id="convenio" placeholder="Pesquisar">
+                        <option value="">Pesquisar</option>
+                        <option value="Amil">Amil</option>
+                        <option value="Assefaz">Assefaz</option>
+                        <option value="Bradesco">Bradesco</option>
+                        <option value="CAMED">CAMED</option>
+                        <option value="Capesaúde">Capesaúde</option>
+                        <option value="CASSI">CASSI</option>
+                        <option value="Caurn">Caurn</option>
+                        <option value="Forças armadas - Aeronáutica">Forças armadas - Aeronáutica</option>
+                        <option value="Forças Armadas - Exército">Forças Armadas - Exército</option>
+                        <option value="Forças Armadas - Marinha ">Forças Armadas - Marinha</option>
+                        <option value="FUNCEF (Caixa)">FUNCEF (Caixa)</option>
+                        <option value="Geap">Geap</option>
+                        <option value="Humana Saúde">Humana Saúde</option>
+                        <option value="Mediservice">Mediservice</option>
+                        <option value="Petrobrás (Petroléo)">Petrobrás (Petroléo)</option>
+                        <option value="Postal Saúde (Correios)">Postal Saúde (Correios)</option>
+                        <option value="Smile Saúde">Smile Saúde</option>
+                        <option value="SulAmérica">SulAmérica</option>
+                        <option value="Unimed Intercambio">Unimed Intercambio</option>
+                        <option value="Unimed Natal">Unimed Natal</option>
+                        <option value="Vale Saúde Sempre">Vale Saúde Sempre</option>
+                    </select> <input id="cb_particular" name="cb_particular" type="checkbox" /> <span
+                        style="margin-left:12px;color:#646567;font-weight: 400;">Particular (sem uso de plano)</span>
+
+                    <h5 data-aviso="convenio">Selecione o seu convênio</h5>
+                </article>
+
+                <article class="pre-agendamento__box__contents__content pre-agendamento__box__contents__content--dados">
+                    <h2>Informe seus dados pessoais.</h2>
+
+                    <fieldset><input id="nome" name="nome" placeholder="Nome completo*" required="" type="text" />
+                    </fieldset>
+
+                    <fieldset><input data-js="cpf" id="cpf" maxlength="14" name="cpf" placeholder="CPF*" required=""
+                            type="text" /> <label class="label-birth">Data de Nascimento*</label><input
+                            id="dataNascimento" name="dataNascimento" placeholder="Data de nascimento*" required=""
+                            type="date" value="1985-06-20" /></fieldset>
+
+                    <fieldset><input id="email" name="email" placeholder="E-mail*" required="" type="email" /><input
+                            id="telefone" name="telefone" placeholder="Telefone*" required="" type="tel" /></fieldset>
+
+                    <h6>*campos obrigatórios</h6>
+
+                    <h5 data-aviso="dadosPessoais">Verifique se os campos estão vazios ou preenchidos incorretamente.
+                    </h5>
+                </article>
+
+                <article
+                    class="pre-agendamento__box__contents__content pre-agendamento__box__contents__content--horario-contato">
+                    <h2>Só mais 1 passo.</h2>
+
+                    <p>Qual o melhor dia e horário para um de nossos profissionais telefonar para você e passar todas as
+                        informações necessárias?</p>
+
+                    <section>
+                        <aside><img alt="Ícone"
+                                src="https://cdn1-originals.webdamdb.com/13725_134914069?cache=1656430597&amp;response-content-disposition=inline;filename=tarde2.png&amp;Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9jZG4xLW9yaWdpbmFscy53ZWJkYW1kYi5jb20vMTM3MjVfMTM0OTE0MDY5P2NhY2hlPTE2NTY0MzA1OTcmcmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj1pbmxpbmU7ZmlsZW5hbWU9dGFyZGUyLnBuZyIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MjE0NzQxNDQwMH19fV19&amp;Signature=NT2LXxxtP5ufKlDJkHBhWwfk-Y5K1EqwP9O2tuvWqhjYEf5vMWusbZcay10foBMrfhjqf9~RYoGtq61oIkhA2zqSqjLTaV3m0NuSFt-Qhl57HLK2y99534OC-v7-skbu2xe3d5K6tKfRj8uY9JytMl9ls9vy12amrfuz8EQJP9X-CqJRmel~GqOilhkGAyBNEKP-6MBVK1DUhRSCinTmpFmVePWZ-hWD7PibMp7uVwDyX6ZlxmueMZD2DFMl1DVyhBwe2Z4PjMRDDnKBJemLQMhYTliBli2GGvm53aAi1d4h7lE6aDS1BXYk3VuWoqKsZnldzw7AqLO--Ql38FE4tQ__&amp;Key-Pair-Id=APKAI2ASI2IOLRFF2RHA" />
+                            <label for="7as12"> <input id="7as12" name="horarioManha" type="checkbox"
+                                    value="7h e 12h" /> <span>08:30 às 12:00</span> </label>
+                        </aside>
+
+                        <aside><img alt="Ícone"
+                                src="https://cdn1-originals.webdamdb.com/13725_134914071?cache=1656430603&amp;response-content-disposition=inline;filename=sol2.png&amp;Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9jZG4xLW9yaWdpbmFscy53ZWJkYW1kYi5jb20vMTM3MjVfMTM0OTE0MDcxP2NhY2hlPTE2NTY0MzA2MDMmcmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj1pbmxpbmU7ZmlsZW5hbWU9c29sMi5wbmciLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjIxNDc0MTQ0MDB9fX1dfQ__&amp;Signature=ZU54tvdp6dQgLEpMbTpzNxpsJs-yqSrpxNwYd9pAnABwaCM~~xeduD~D6JKu6vEPMzhcfFZ7fo0ad7JWaUJNV3vAmUAELet4GgxJK8U6T-hWG5ja1PTh1nrseau1GkPoQIt-PdvIeeAPelsKsDvYsEC-Tm0YffASH733~KVyXvt9BN91mrAkeDByYfGHYz1e1NMxyj9wraUqCRR~NkzXiOaWGVKefoVWQM-C-gLbi~Aj5mZGL5-lXqgfNgiGAByr0-HtLVd6vF3l0TyfZHtUsCJ7Jkd9yXhOrY452F8TMcTNSvpJwmGgW9dCL4Wrdpr90KMBZoGWTPU8lNI1kt93Cw__&amp;Key-Pair-Id=APKAI2ASI2IOLRFF2RHA" />
+                            <label for="13as18"> <input id="13as18" name="horarioTarde" type="checkbox"
+                                    value="12h e 18h" /> <span>12:00 às 18:00</span> </label>
+                        </aside>
+
+                        <aside><img alt="Ícone"
+                                src="https://cdn1-originals.webdamdb.com/13725_134914066?cache=1656430593&amp;response-content-disposition=inline;filename=noite2.png&amp;Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9jZG4xLW9yaWdpbmFscy53ZWJkYW1kYi5jb20vMTM3MjVfMTM0OTE0MDY2P2NhY2hlPTE2NTY0MzA1OTMmcmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj1pbmxpbmU7ZmlsZW5hbWU9bm9pdGUyLnBuZyIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MjE0NzQxNDQwMH19fV19&amp;Signature=mhMbCF7fYiNT614aSRy7741ML9nI5Y8XpBasICPf4D-EoWJn139TG3swvaqi06HZpkRbxet~OqZn0bvIIFFTMWGBS537rIBuOPoH5kUOHfQa~hv~R-NDkxxAjHnrLkDC9kJhsm0NLC6klX63mcHT3kAjsh1mMy4to9pMc0R7Lt8POrLIQMiC8Ak6xbO2A3QO7aDuGu9yfJFWGJyqxidwH3soEKWAEw-BIaLtE80x-VYmAM-ObILG8OcHCS3G-TWVOJ376OkjNPvEvofOSI2vo0TPVKpvD-NJUSoq24KY8tq4rQBBOFN8imcPD-9-TIKyhxtfjmSASkbc7SGngjwITQ__&amp;Key-Pair-Id=APKAI2ASI2IOLRFF2RHA" />
+                            <label for="19as21"> <input id="19as21" name="horarioNoite" type="checkbox"
+                                    value="18h e 21h" /> <span>18:00 às 20:00</span> </label>
+                        </aside>
+                    </section>
+
+                    <h5 data-aviso="horario-contato">Selecione um horário</h5>
+                    <!---label for="mensagemWpp"><input id="mensagemWpp" name="mensagemWpp" type="checkbox" /> <span>Se você prefere receber uma mensagem via <strong>Whatsapp</strong>, basta assinalar esta opção.</span> </label-->
+                </article>
+
+                <article
+                    class="pre-agendamento__box__contents__content pre-agendamento__box__contents__content--confirmacao">
+                    <h2>Falta só confirmar.</h2>
+
+                    <p>Confira abaixo o resumo da sua solicitação.</p>
+
+                    <div>
+                        <p data-consulta="">&nbsp;</p>
+
+                        <p data-exame="">&nbsp;</p>
+
+                        <p data-nome="">&nbsp;</p>
+
+                        <p data-email="">&nbsp;</p>
+
+                        <p data-cpf="">&nbsp;</p>
+
+                        <p data-tel="">&nbsp;</p>
+
+                        <p data-datanascimento="">&nbsp;</p>
+
+                        <p data-horariocontato="">&nbsp;</p>
+                    </div>
+                    <label for="termosCondicoes"><input id="termosCondicoes" required="" type="checkbox" /> <span>Li e
+                            aceito os <a class="open">termos e condições</a>.</span> </label>
+                </article>
+                <button class="button" data-next="" type="button">Próximo</button>
+            </form>
+
+            <article class="popup">
+                <div class="popup__container">
+                    <p>Autorizo o Hospital Promater, nos termos da Lei Geral de Proteção de Dados, e para os fins
+                        específicos de pré-agendamento de consultas e exames, a coletar, registrar, armazenar e fazer
+                        uso dos dados para a finalidade indicada, bem como a compartilhar os meus dados pessoais com os
+                        terceiros, que participarão do procedimento agendado, e com os profissionais do Hospital.
+                        Esclareço ainda que fui informado que a qualquer tempo poderei requerer a correção dos dados
+                        cadastrados ou a exclusão dos meus dados para os fins específicos de pré-agendamento</p>
+                    <button type="button">X</button>
+                </div>
+            </article>
+
+            <section class="pre-agendamento__box__final">
+                <h2>Feito!</h2>
+
+                <p>Agora é só aguardar uma ligação no período que você escolheu.</p>
+
+                <p><strong>Lembre-se:</strong> você precisa ter o pedido em mãos para realizar o exame.</p>
+
+                <footer>
+                    <aside>
+                        <h5>Acompanhe nossas redes sociais</h5>
+
+                        <div><a href="##" target="_blank"><img alt="Facebook"
+                                    src="https://cdn1-originals.webdamdb.com/13725_134914064?cache=1656430596&amp;response-content-disposition=inline;filename=facebook_0.png&amp;Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9jZG4xLW9yaWdpbmFscy53ZWJkYW1kYi5jb20vMTM3MjVfMTM0OTE0MDY0P2NhY2hlPTE2NTY0MzA1OTYmcmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj1pbmxpbmU7ZmlsZW5hbWU9ZmFjZWJvb2tfMC5wbmciLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjIxNDc0MTQ0MDB9fX1dfQ__&amp;Signature=QL9SPRMDGKQlNONZQcrHMMChHTOC-kMv1iAtIPL05P9-u808v0xpCW3FuGTmJuptASS2z2Jn5hk0TNR8~~amVur2-2NSyCpW3ManljOMvAFirJpIUaLnaWNUlQTyhu3LECrmRF3by6HBCSBNe1dwSk9yyfQq2wcQYJAl1txBNNmn125wOrTq4Iyp868RmVLxGMfc6ePrtWvhmyncYuvwxrAc2HU~MXX~prSEg8-i~xBcFVguygKNvSrzf4BERQVbIDKCyr4aUbU5ilDr8CCg4qiDXzkMYIlAp4nhsqyNWH0o1WxXkrgmLK4gYKub5Ni9UCY3I4cqkzebU04VsrQuUw__&amp;Key-Pair-Id=APKAI2ASI2IOLRFF2RHA" /></a>
+                            <a href="##" target="_blank"><img alt="Instagram"
+                                    src="https://cdn1-originals.webdamdb.com/13725_134914056?cache=1656430593&amp;response-content-disposition=inline;filename=instagram_0.png&amp;Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9jZG4xLW9yaWdpbmFscy53ZWJkYW1kYi5jb20vMTM3MjVfMTM0OTE0MDU2P2NhY2hlPTE2NTY0MzA1OTMmcmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj1pbmxpbmU7ZmlsZW5hbWU9aW5zdGFncmFtXzAucG5nIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoyMTQ3NDE0NDAwfX19XX0_&amp;Signature=hYqJB1w2DvVZc56dIPWd-kwooeAN~NUdv72jk2cik5HrRu3pvkTd~iHwfl1bBYKeHkS7jh4Mib8As87we87ZbUJG4YhHtqCL1Xmwg5jGU5i3cBQ8jSVEHNXCCUifmMyKUVsJiMnatsTgx9wHa3w1ftnbxDzKsp-lr17aPVQWBY7LwCLCAp7iSV3RUF9MAkO1Vz6tLeTJRyFQiDqaCtelkqPlVodbwTXwoEF5JPAxoG7OLMLCNVPrIggyLX~dmTkMNK1NBVLLKDyfof7s~CmUi1fwZNLdGNirg7FTnB9BFhtQgRXgQyWodawREOrwJdQ~E2ddLLiBvfaoioZFTf-ZNg__&amp;Key-Pair-Id=APKAI2ASI2IOLRFF2RHA" /></a>
+                            <a href="##" target="_blank"><img alt="Linkedin"
+                                    src="https://cdn1-originals.webdamdb.com/13725_134914059?cache=1656430591&amp;response-content-disposition=inline;filename=linkedin_0.png&amp;Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9jZG4xLW9yaWdpbmFscy53ZWJkYW1kYi5jb20vMTM3MjVfMTM0OTE0MDU5P2NhY2hlPTE2NTY0MzA1OTEmcmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj1pbmxpbmU7ZmlsZW5hbWU9bGlua2VkaW5fMC5wbmciLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjIxNDc0MTQ0MDB9fX1dfQ__&amp;Signature=co4PDWm~zRuLibsZPqo3q0Xid8ydswFboVFMw505M0IpexPsybWs9lHRrHZh9MRUupdhsT9uhYnBRu3-0tYTNeJ7NzCHIe4gg212WlmLNN4V1vxpxPkz7elB3kxvXrrz-eA5mBZsBsgSLEECAFEjdYAAVL2OuZ4DesIzU0-sGRglGJAOyw33HUmIiytB3ehC~hYLROHYHUUKiOpE39WOmFyYAn86wSX1tGVhowNb-QgHYRgo8siY3Z8YmttOKIX-irYEwLsfWJojbUcdk7o55p2WndR8nbNeBj5nRI9~BCym8RZImUEglqFtorvNA5TdptnQPXDhsrWcaOUPs1VMtw__&amp;Key-Pair-Id=APKAI2ASI2IOLRFF2RHA" /></a>
+                        </div>
+                    </aside>
+                </footer>
+            </section>
+        </section>
+    </div>
+</main>
+<style type="text/css">
+    * {
+        list-style: none;
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        background: unset;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        font-family: "Hind", sans-serif;
+        color: #646567;
+    }
+
+    .pre-agendamento {
+        background: #E5E5E5 url("https://cdn1-originals.webdamdb.com/13725_134914062?cache=1656430604&response-content-disposition=inline;filename=bg-desk_0.png&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9jZG4xLW9yaWdpbmFscy53ZWJkYW1kYi5jb20vMTM3MjVfMTM0OTE0MDYyP2NhY2hlPTE2NTY0MzA2MDQmcmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj1pbmxpbmU7ZmlsZW5hbWU9YmctZGVza18wLnBuZyIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MjE0NzQxNDQwMH19fV19&Signature=XhgVg8o~ibpUNF0VA-LDil9cPjIHLYpHbjcyNRNivrTt4r1oFAfityL3MikDZCbANTzDT1f9j~MAPLrM-cDYj0ARL9LrCz04XgraczMtsxgrXPADBoMIxyddX5vQtx1poyqfYbvhTW8xrxUesAsnr6zkmXTIFGGuQbeBSqYe~yxjln3D6heOwLLeKOov5YRvE2Fb4xdq31FOXMtCamANep4hzp3Jym0MUBTyfW86USgMO6CUIkviBrItV0b4Dah1-qLtiKzamLkB4pGnJegPxJhaYbMn3-AgkXohkaJlKrzIS4anjJI~agyAoxDEHiVWXukQk2LcTsocRY0JV7C~vg__&Key-Pair-Id=APKAI2ASI2IOLRFF2RHA") right/contain fixed no-repeat;
+        min-height: 100vh;
+        width: 100%;
+        padding: 0 0 96px 0;
+        position: relative;
+    }
+
+    .title-subtitle__description {
+        margin-top: 0 !important;
+    }
+
+    #exameUpload[type="file"] {
+        display: none;
+        /* se tirar o display none daqui, volta a aparecer o formato original */
+    }
+
+    .custom-exameUpload {
+        display: block !important;
+    }
+
+    .whatsapp-button {
+        display: none !important;
+    }
+
+    @media screen and (max-width: 1080px) {
+        .pre-agendamento {
+            background: #E5E5E5 url("https://cdn1-originals.webdamdb.com/13725_134914062?cache=1656430604&response-content-disposition=inline;filename=bg-desk_0.png&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9jZG4xLW9yaWdpbmFscy53ZWJkYW1kYi5jb20vMTM3MjVfMTM0OTE0MDYyP2NhY2hlPTE2NTY0MzA2MDQmcmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj1pbmxpbmU7ZmlsZW5hbWU9YmctZGVza18wLnBuZyIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MjE0NzQxNDQwMH19fV19&Signature=XhgVg8o~ibpUNF0VA-LDil9cPjIHLYpHbjcyNRNivrTt4r1oFAfityL3MikDZCbANTzDT1f9j~MAPLrM-cDYj0ARL9LrCz04XgraczMtsxgrXPADBoMIxyddX5vQtx1poyqfYbvhTW8xrxUesAsnr6zkmXTIFGGuQbeBSqYe~yxjln3D6heOwLLeKOov5YRvE2Fb4xdq31FOXMtCamANep4hzp3Jym0MUBTyfW86USgMO6CUIkviBrItV0b4Dah1-qLtiKzamLkB4pGnJegPxJhaYbMn3-AgkXohkaJlKrzIS4anjJI~agyAoxDEHiVWXukQk2LcTsocRY0JV7C~vg__&Key-Pair-Id=APKAI2ASI2IOLRFF2RHA") 0 125%/contain no-repeat;
+            padding: 0;
+        }
+    }
+
+    .pre-agendamento img {
+        display: block;
+        max-width: 100%;
+    }
+
+    .pre-agendamento button {
+        cursor: pointer;
+    }
+
+    .pre-agendamento input[type="text"],
+    .pre-agendamento input[type="password"],
+    .pre-agendamento input[type="tel"],
+    .pre-agendamento input[type="email"],
+    .pre-agendamento input[type="search"],
+    .pre-agendamento input[type="number"],
+    .pre-agendamento input[type="date"] {
+        display: block;
+        width: 100%;
+        padding: 4px 0 8px 0;
+        font: 400 20px/1 "Hind", sans-serif;
+        border-bottom: 1px solid #E8E8E8;
+        color: #646567;
+        resize: none;
+        -webkit-transition: 400ms ease;
+        transition: 400ms ease;
+    }
+
+    @media screen and (max-width: 1080px) {
+
+        .pre-agendamento input[type="text"],
+        .pre-agendamento input[type="password"],
+        .pre-agendamento input[type="tel"],
+        .pre-agendamento input[type="email"],
+        .pre-agendamento input[type="search"],
+        .pre-agendamento input[type="number"],
+        .pre-agendamento input[type="date"] {
+            font-size: 17px;
+            padding: 0 0 6px 0;
+        }
+    }
+
+    .pre-agendamento input[type="text"]::-webkit-input-placeholder,
+    .pre-agendamento input[type="password"]::-webkit-input-placeholder,
+    .pre-agendamento input[type="tel"]::-webkit-input-placeholder,
+    .pre-agendamento input[type="email"]::-webkit-input-placeholder,
+    .pre-agendamento input[type="search"]::-webkit-input-placeholder,
+    .pre-agendamento input[type="number"]::-webkit-input-placeholder,
+    .pre-agendamento input[type="date"]::-webkit-input-placeholder {
+        opacity: 1;
+        color: #ABACAF;
+    }
+
+    .pre-agendamento input[type="text"]:-ms-input-placeholder,
+    .pre-agendamento input[type="password"]:-ms-input-placeholder,
+    .pre-agendamento input[type="tel"]:-ms-input-placeholder,
+    .pre-agendamento input[type="email"]:-ms-input-placeholder,
+    .pre-agendamento input[type="search"]:-ms-input-placeholder,
+    .pre-agendamento input[type="number"]:-ms-input-placeholder,
+    .pre-agendamento input[type="date"]:-ms-input-placeholder {
+        opacity: 1;
+        color: #ABACAF;
+    }
+
+    .pre-agendamento input[type="text"]::-ms-input-placeholder,
+    .pre-agendamento input[type="password"]::-ms-input-placeholder,
+    .pre-agendamento input[type="tel"]::-ms-input-placeholder,
+    .pre-agendamento input[type="email"]::-ms-input-placeholder,
+    .pre-agendamento input[type="search"]::-ms-input-placeholder,
+    .pre-agendamento input[type="number"]::-ms-input-placeholder,
+    .pre-agendamento input[type="date"]::-ms-input-placeholder {
+        opacity: 1;
+        color: #ABACAF;
+    }
+
+    .pre-agendamento input[type="text"]::placeholder,
+    .pre-agendamento input[type="password"]::placeholder,
+    .pre-agendamento input[type="tel"]::placeholder,
+    .pre-agendamento input[type="email"]::placeholder,
+    .pre-agendamento input[type="search"]::placeholder,
+    .pre-agendamento input[type="number"]::placeholder,
+    .pre-agendamento input[type="date"]::placeholder {
+        opacity: 1;
+        color: #ABACAF;
+    }
+
+    .pre-agendamento input[type="text"]:focus,
+    .pre-agendamento input[type="password"]:focus,
+    .pre-agendamento input[type="tel"]:focus,
+    .pre-agendamento input[type="email"]:focus,
+    .pre-agendamento input[type="search"]:focus,
+    .pre-agendamento input[type="number"]:focus,
+    .pre-agendamento input[type="date"]:focus {
+        border-color: #6C1F77;
+    }
+
+    .pre-agendamento select,
+    .pre-agendamento option {
+        border-radius: 20px;
+        display: block;
+        width: 100%;
+        height: 46px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding: 0 20px;
+        font: 400 18px/1 "Hind", sans-serif;
+        border: 1px solid #E8E8E8;
+        background: #E8E8E8;
+        color: #ABACAF;
+        resize: none;
+        -webkit-transition: 400ms ease;
+        transition: 400ms ease;
+    }
+
+    .pre-agendamento select::-webkit-input-placeholder,
+    .pre-agendamento option::-webkit-input-placeholder {
+        opacity: 1;
+        color: #ABACAF;
+    }
+
+    .pre-agendamento select:-ms-input-placeholder,
+    .pre-agendamento option:-ms-input-placeholder {
+        opacity: 1;
+        color: #ABACAF;
+    }
+
+    .pre-agendamento select::-ms-input-placeholder,
+    .pre-agendamento option::-ms-input-placeholder {
+        opacity: 1;
+        color: #ABACAF;
+    }
+
+    .pre-agendamento select::placeholder,
+    .pre-agendamento option::placeholder {
+        opacity: 1;
+        color: #ABACAF;
+    }
+
+    .pre-agendamento p {
+        font: 400 22px/1.2 "Hind", sans-serif;
+    }
+
+    .pre-agendamento .container {
+        max-width: 1360px;
+        width: 100%;
+        padding: 0 20px;
+        margin: 0 auto;
+    }
+
+    @media screen and (max-width: 1500px) {
+        .pre-agendamento .container {
+            zoom: .9;
+        }
+    }
+
+    @media screen and (max-width: 1080px) {
+        .pre-agendamento .container {
+            zoom: 1;
+        }
+    }
+
+    .pre-agendamento .button {
+        font: 600 24px/1 "Hind", sans-serif;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        text-align: center;
+        color: #FFFFFF;
+        background: #6C1F77;
+        border: 1px solid #6C1F77;
+        padding: 0 96px;
+        height: 52px;
+        border-radius: 20px;
+        letter-spacing: .16rem;
+        -webkit-transition: 400ms ease;
+        transition: 400ms ease;
+    }
+
+    @media screen and (max-width: 1080px) {
+        .pre-agendamento .button {
+            width: 100%;
+            height: 48px;
+            font-size: 22px;
+        }
+    }
+
+    .pre-agendamento .button:hover {
+        background: unset;
+        color: #6C1F77;
+    }
+
+    .pre-agendamento__header {
+        max-width: 430px;
+        width: 100%;
+        padding: 48px 0 64px 0;
+    }
+
+    @media screen and (max-width: 1080px) {
+        .pre-agendamento__header {
+            padding: 6px 0 0 0;
+            height: 100vh;
+            position: relative;
+        }
+    }
+
+    .pre-agendamento__header a {
+        max-width: 220px;
+        margin: 0 0 32px 0;
+        display: block;
+    }
+
+    @media screen and (max-width: 1080px) {
+        .pre-agendamento__header a {
+            max-width: 180px;
+        }
+    }
+
+    .pre-agendamento__header h1 {
+        font: 600 42px/1.1 "Hind", sans-serif;
+    }
+
+    @media screen and (max-width: 1080px) {
+        .pre-agendamento__header h1 {
+            font-size: 21px;
+        }
+    }
+
+    .pre-agendamento__header p {
+        max-width: 280px;
+        width: 100%;
+        margin: 24px 0 0 0;
+        font: 400 24px/1.2 "Hind", sans-serif;
+    }
+
+    @media screen and (max-width: 1080px) {
+        .pre-agendamento__header p {
+            font-size: 18px;
+            margin: 16px 0 0 0;
+        }
+    }
+
+    .pre-agendamento__header .button {
+        margin: 40px 0 0 0;
+    }
+
+    @media screen and (max-width: 1080px) {
+        .pre-agendamento__header .button {
+            position: absolute;
+            left: 0;
+            bottom: 32px;
+            display: -webkit-box !important;
+            display: -ms-flexbox !important;
+            display: flex !important;
+        }
+    }
+
+    .pre-agendamento__box {
+        background: #FFFFFF;
+        padding: 40px 144px;
+        margin: 0 0 0 10px;
+        width: 94%;
+        max-width: 1100px;
+        position: relative;
+        min-height: 420px;
+        -webkit-transition: 400ms ease;
+        transition: 400ms ease;
+        display: none;
+    }
+
+    .pre-agendamento__box.active {
+        display: block;
+    }
+
+    @media screen and (max-width: 1080px) {
+        .pre-agendamento__box {
+            position: absolute;
+            height: 95%;
+            padding: 40px 20px 20px;
+            z-index: 999;
+            top: 2rem;
+            left: 0;
+            overflow: hidden;
+        }
+    }
+
+    .pre-agendamento__box [data-prev] {
+
+        width: 24px;
+        margin: 0 0 -2px -80px;
+    }
+
+    @media screen and (max-width: 1080px) {
+        .pre-agendamento__box [data-prev] {
+            margin: 0 0 -32px 0;
+        }
+    }
+
+    .pre-agendamento__box [data-next] {
+        margin: 56px auto 0 auto;
+    }
+
+    @media screen and (max-width: 1080px) {
+        .pre-agendamento__box [data-next] {
+            position: absolute;
+            left: 20px;
+            bottom: 32px;
+            width: calc(100% - 40px);
+        }
+    }
+
+    .pre-agendamento__box__contents__content {
+        min-height: 260px;
+        display: none;
+    }
+
+    @media screen and (max-width: 1080px) {
+        .pre-agendamento__box__contents__content {
+            height: calc(65vh - 128px);
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+    }
+
+    .pre-agendamento__box__contents__content.active {
+        display: block;
+    }
+
+    .pre-agendamento__box__contents__content h2 {
+        text-align: center;
+        margin: 0 0 36px 0;
+        font: 700 25px/1.2 "Hind", sans-serif;
+    }
+
+    @media screen and (max-width: 1080px) {
+        .pre-agendamento__box__contents__content h2 {
+            font: 700 22px/1.1 "Hind", sans-serif;
+            max-width: 205px;
+            width: 100%;
+            min-height: 48px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            margin: 0 auto 36px auto;
+        }
+    }
+
+    .pre-agendamento__box__contents__content h5 {
+        margin: 24px 0 0 0;
+        font: 500 16px/1 "Hind", sans-serif;
+        color: #d41c1c;
+        text-align: center;
+        display: none;
+    }
+
+    .pre-agendamento__box__contents__content--necessidade header {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        margin: 0 0 48px 0;
+    }
+
+    @media screen and (max-width: 1080px) {
+        .pre-agendamento__box__contents__content--necessidade header {
+            display: block;
+            margin: 0 0 20px 0;
+        }
+    }
+
+    .pre-agendamento__box__contents__content--necessidade header h2 {
+        text-align: left;
+        margin: 0;
+    }
+
+    @media screen and (max-width: 1080px) {
+        .pre-agendamento__box__contents__content--necessidade header h2 {
+            text-align: center;
+            margin: 0 auto 20px auto;
+        }
+    }
+
+    .pre-agendamento__box__contents__content--necessidade header aside {
+        border: 3px solid #E8E8E8;
+        border-radius: 20px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding: 3px;
+    }
+
+    @media screen and (max-width: 1080px) {
+        .pre-agendamento__box__contents__content--necessidade header aside {
+            border-width: 2px;
+        }
+    }
+
+    .pre-agendamento__box__contents__content--necessidade header aside label {
+        display: block;
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 1080px) {
+        .pre-agendamento__box__contents__content--necessidade header aside label {
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            width: 100%;
+        }
+    }
+
+    .pre-agendamento__box__contents__content--necessidade header aside label input {
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .pre-agendamento__box__contents__content--necessidade header aside label input:checked~span {
+        background: #6C1F77;
+        color: #FFFFFF;
+    }
+
+    .pre-agendamento__box__contents__content--necessidade header aside label span {
+        display: block;
+        color: #ABACAF;
+        text-align: center;
+        font: 600 18px/1 "Hind", sans-serif;
+        border-radius: 14px;
+        padding: 12px 80px;
+        -webkit-transition: 400ms ease;
+        transition: 400ms ease;
+    }
+
+    @media screen and (max-width: 1080px) {
+        .pre-agendamento__box__contents__content--necessidade header aside label span {
+            padding: 10px 0;
+        }
+    }
+
+    .pre-agendamento__box__contents__content--necessidade__consulta .selectize-control .selectize-input {
+        padding: 54px 0 0 0 !important;
+        -webkit-box-shadow: unset !important;
+        box-shadow: unset !important;
+        border-radius: unset !important;
+        border: unset !important;
+        display: block !important;
+        position: relative !important;
+        overflow: initial !important;
+    }
+
+    .pre-agendamento__box__contents__content--necessidade__consulta .selectize-control .selectize-input input {
+        margin: 0;
+        border-radius: 20px;
+        height: 45px;
+        -webkit-box-shadow: unset;
+        box-shadow: unset;
+        color: #ABACAF;
+        background: #E8E8E8 !important;
+        font: 400 18px/1 "Hind", sans-serif;
+        border: unset;
+        width: 100% !important;
+        padding: 0 20px !important;
+        -webkit-box-sizing: border-box !important;
+        box-sizing: border-box !important;
+        display: block;
+        opacity: 1 !important;
+        position: absolute !important;
+        left: 0 !important;
+        top: 0 !important;
+    }
+
+    .pre-agendamento__box__contents__content--necessidade__consulta .selectize-control .selectize-input input::-webkit-input-placeholder {
+        opacity: 1;
+        color: #ABACAF;
+    }
+
+    .pre-agendamento__box__contents__content--necessidade__consulta .selectize-control .selectize-input input:-ms-input-placeholder {
+        opacity: 1;
+        color: #ABACAF;
+    }
+
+    .pre-agendamento__box__contents__content--necessidade__consulta .selectize-control .selectize-input input::-ms-input-placeholder {
+        opacity: 1;
+        color: #ABACAF;
+    }
+
+    .pre-agendamento__box__contents__content--necessidade__consulta .selectize-control .selectize-input input::placeholder {
+        opacity: 1;
+        color: #ABACAF;
+    }
+
+    .pre-agendamento__box__contents__content--necessidade__consulta .selectize-control .selectize-input .item,
+    .pre-agendamento__box__contents__content--necessidade__consulta .selectize-control .selectize-input .item.active {
+        font: 400 14px/1 "Hind", sans-serif !important;
+        border: unset;
+        -webkit-box-shadow: unset;
+        box-shadow: unset;
+        border-radius: 10px;
+        color: #646567;
+        background: #E8E8E8;
+        position: relative;
+        cursor: initial;
+        padding: 5px 10px 4px 20px !important;
+        text-shadow: unset;
+        margin: 0 8px 8px 0;
+    }
+
+    @media screen and (max-width: 1080px) {
+
+        .pre-agendamento__box__contents__content--necessidade__consulta .selectize-control .selectize-input .item,
+        .pre-agendamento__box__contents__content--necessidade__consulta .selectize-control .selectize-input .item.active {
+            font-size: 13px;
+        }
+    }
+
+    .pre-agendamento__box__contents__content--necessidade__consulta .selectize-control .selectize-input .item .remove,
+    .pre-agendamento__box__contents__content--necessidade__consulta .selectize-control .selectize-input .item.active .remove {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        left: 8px;
+        display: block;
+        opacity: .7;
+        padding: unset;
+        font: 400 17px/1 "Hind", sans-serif;
+        border-left: unset;
+        margin: 0 8px 0 0;
+    }
+
+    .pre-agendamento__box__contents__content--necessidade__consulta .selectize-control .selectize-input .item .remove:hover,
+    .pre-agendamento__box__contents__content--necessidade__consulta .selectize-control .selectize-input .item.active .remove:hover {
+        background: unset;
+    }
+
+    .pre-agendamento__box__contents__content--necessidade__exame {
+        display: none;
+    }
+
+    .pre-agendamento__box__contents__content--necessidade__exame section {
+        margin: 0 0 20px 0;
+    }
+
+    .pre-agendamento__box__contents__content--necessidade__exame section .selectize-control .selectize-input {
+        padding: 54px 0 0 0 !important;
+        -webkit-box-shadow: unset !important;
+        box-shadow: unset !important;
+        border-radius: unset !important;
+        border: unset !important;
+        display: block !important;
+        position: relative !important;
+        overflow: initial !important;
+    }
+
+    .pre-agendamento__box__contents__content--necessidade__exame section .selectize-control .selectize-input input {
+        margin: 0;
+        border-radius: 20px;
+        height: 45px;
+        -webkit-box-shadow: unset;
+        box-shadow: unset;
+        color: #ABACAF;
+        background: #E8E8E8 !important;
+        font: 400 18px/1 "Hind", sans-serif;
+        border: unset;
+        width: 100% !important;
+        padding: 0 20px !important;
+        -webkit-box-sizing: border-box !important;
+        box-sizing: border-box !important;
+        display: block;
+        opacity: 1 !important;
+        position: absolute !important;
+        left: 0 !important;
+        top: 0 !important;
+    }
+
+    .pre-agendamento__box__contents__content--necessidade__exame section .selectize-control .selectize-input input::-webkit-input-placeholder {
+        opacity: 1;
+        color: #ABACAF;
+    }
+
+    .pre-agendamento__box__contents__content--necessidade__exame section .selectize-control .selectize-input input:-ms-input-placeholder {
+        opacity: 1;
+        color: #ABACAF;
+    }
+
+    .pre-agendamento__box__contents__content--necessidade__exame section .selectize-control .selectize-input input::-ms-input-placeholder {
+        opacity: 1;
+        color: #ABACAF;
+    }
+
+    .pre-agendamento__box__contents__content--necessidade__exame section .selectize-control .selectize-input input::placeholder {
+        opacity: 1;
+        color: #ABACAF;
+    }
+
+    .pre-agendamento__box__contents__content--necessidade__exame section .selectize-control .selectize-input .item,
+    .pre-agendamento__box__contents__content--necessidade__exame section .selectize-control .selectize-input .item.active {
+        font: 400 14px/1 "Hind", sans-serif !important;
+        border: unset;
+        -webkit-box-shadow: unset;
+        box-shadow: unset;
+        border-radius: 10px;
+        color: #646567;
+        background: #E8E8E8;
+        position: relative;
+        cursor: initial;
+        padding: 5px 10px 4px 20px !important;
+        text-shadow: unset;
+        margin: 0 8px 8px 0;
+    }
+
+    @media screen and (max-width: 1080px) {
+
+        .pre-agendamento__box__contents__content--necessidade__exame section .selectize-control .selectize-input .item,
+        .pre-agendamento__box__contents__content--necessidade__exame section .selectize-control .selectize-input .item.active {
+            font-size: 13px;
+        }
+    }
+
+    .pre-agendamento__box__contents__content--necessidade__exame section .selectize-control .selectize-input .item .remove,
+    .pre-agendamento__box__contents__content--necessidade__exame section .selectize-control .selectize-input .item.active .remove {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        left: 8px;
+        display: block;
+        opacity: .7;
+        padding: unset;
+        font: 400 17px/1 "Hind", sans-serif;
+        border-left: unset;
+        margin: 0 8px 0 0;
+    }
+
+    .pre-agendamento__box__contents__content--necessidade__exame section .selectize-control .selectize-input .item .remove:hover,
+    .pre-agendamento__box__contents__content--necessidade__exame section .selectize-control .selectize-input .item.active .remove:hover {
+        background: unset;
+    }
+
+    .pre-agendamento__box__contents__content--necessidade__exame p {
+        font-size: 16px;
+    }
+
+    .pre-agendamento__box__contents__content--necessidade__exame input {
+        margin: 12px 0 0 0;
+    }
+
+    .pre-agendamento__box__contents__content--necessidade__exame h5 {
+        margin: 12px 0 24px 0;
+    }
+
+    .pre-agendamento__box__contents__content--convenio .selectize-control .selectize-input {
+        border-radius: 20px;
+        border: unset !important;
+        background: #E8E8E8 !important;
+        padding: 0 20px !important;
+    }
+
+    .pre-agendamento__box__contents__content--convenio .selectize-control .selectize-input .item,
+    .pre-agendamento__box__contents__content--convenio .selectize-control .selectize-input input {
+        height: 45px;
+        font: 400 18px/1 "Hind", sans-serif;
+        padding: 0 !important;
+        color: #ABACAF;
+    }
+
+    .pre-agendamento__box__contents__content--convenio .selectize-control .selectize-input .item::-webkit-input-placeholder,
+    .pre-agendamento__box__contents__content--convenio .selectize-control .selectize-input input::-webkit-input-placeholder {
+        opacity: 1;
+        color: #ABACAF;
+    }
+
+    .pre-agendamento__box__contents__content--convenio .selectize-control .selectize-input .item:-ms-input-placeholder,
+    .pre-agendamento__box__contents__content--convenio .selectize-control .selectize-input input:-ms-input-placeholder {
+        opacity: 1;
+        color: #ABACAF;
+    }
+
+    .pre-agendamento__box__contents__content--convenio .selectize-control .selectize-input .item::-ms-input-placeholder,
+    .pre-agendamento__box__contents__content--convenio .selectize-control .selectize-input input::-ms-input-placeholder {
+        opacity: 1;
+        color: #ABACAF;
+    }
+
+    .pre-agendamento__box__contents__content--convenio .selectize-control .selectize-input .item::placeholder,
+    .pre-agendamento__box__contents__content--convenio .selectize-control .selectize-input input::placeholder {
+        opacity: 1;
+        color: #ABACAF;
+    }
+
+    .pre-agendamento__box__contents__content--convenio .selectize-control .selectize-input .item {
+        color: #646567;
+        padding: 14px 0 0 0 !important;
+    }
+
+    .pre-agendamento__box__contents__content--convenio .selectize-control .selectize-dropdown {
+        margin: 12px 0 0 0 !important;
+    }
+
+    .pre-agendamento__box__contents__content--dados fieldset {
+        gap: 48px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    @media screen and (max-width: 1080px) {
+        .pre-agendamento__box__contents__content--dados fieldset {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    .pre-agendamento__box__contents__content--dados fieldset:not(:last-of-type) {
+        margin: 0 0 20px 0;
+    }
+
+    @media screen and (max-width: 1080px) {
+        .pre-agendamento__box__contents__content--dados fieldset:not(:last-of-type) {
+            margin: 0 0 20px 0;
+        }
+    }
+
+    .pre-agendamento__box__contents__content--dados h6 {
+        font: 400 14px/1 "Hind", sans-serif;
+        margin: 12px 0 0 0;
+        color: #ABACAF;
+    }
+
+    @media screen and (max-width: 1080px) {
+        .pre-agendamento__box__contents__content--dados h6 {
+            margin: 16px 0 0 0;
+        }
+    }
+
+    .pre-agendamento__box__contents__content--horario-contato p {
+        font: 400 20px/1.2 "Hind", sans-serif;
+        margin: 0 0 48px 0;
+    }
+
+    @media screen and (max-width: 1080px) {
+        .pre-agendamento__box__contents__content--horario-contato p {
+            margin: 0 0 64px 0;
+        }
+    }
+
+    .pre-agendamento__box__contents__content--horario-contato section {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+
+    @media screen and (max-width: 1080px) {
+        .pre-agendamento__box__contents__content--horario-contato section {
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+        }
+    }
+
+    .pre-agendamento__box__contents__content--horario-contato section aside {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        position: relative;
+    }
+
+    @media screen and (max-width: 1080px) {
+        .pre-agendamento__box__contents__content--horario-contato section aside {
+            margin: 0 0 32px 0;
+        }
+
+        .pre-agendamento__box__contents__content--horario-contato section aside:first-of-type::before {
+            content: "Período";
+            color: #6C1F77;
+            font: 500 14px/1 "Hind", sans-serif;
+            position: absolute;
+            top: -12px;
+            left: -6px;
+            -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+        }
+    }
+
+    .pre-agendamento__box__contents__content--horario-contato section aside img {
+        width: auto !important;
+        padding: 0 !important;
+        margin: 0 16px 0 0;
+    }
+
+    .pre-agendamento__box__contents__content--horario-contato section aside label {
+        cursor: pointer;
+        display: block;
+    }
+
+    .pre-agendamento__box__contents__content--horario-contato section aside label:hover span {
+        background: #6C1F77;
+        color: #FFFFFF;
+    }
+
+    .pre-agendamento__box__contents__content--horario-contato section aside label input {
+        position: absolute;
+        opacity: 0;
+    }
+
+    .pre-agendamento__box__contents__content--horario-contato section aside label input:checked~span {
+        background: #6C1F77;
+        color: #FFFFFF;
+    }
+
+    .pre-agendamento__box__contents__content--horario-contato section aside label span {
+        letter-spacing: .1rem;
+        border-radius: 10px;
+        padding: 6px 14px;
+        display: block;
+        -webkit-transition: 200ms ease;
+        transition: 200ms ease;
+        font: 500 20px/1 "Hind", sans-serif;
+        color: #ABACAF;
+    }
+
+    .pre-agendamento__box__contents__content--horario-contato>label {
+        font: 400 16px/1.2 "Hind", sans-serif;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin: 32px 0 0 0;
+    }
+
+    .pre-agendamento__box__contents__content--horario-contato>label input {
+        margin: 0 12px 0 0;
+    }
+
+    .pre-agendamento__box__contents__content--horario-contato>label span strong {
+        font-weight: 700;
+        color: #80BC00;
+    }
+
+    .pre-agendamento__box__contents__content--confirmacao>p {
+        font: 400 22px/1 "Hind", sans-serif;
+        margin: -8px 0 32px 0;
+    }
+
+    @media screen and (max-width: 1080px) {
+        .pre-agendamento__box__contents__content--confirmacao>p {
+            font-size: 18px;
+        }
+    }
+
+    .pre-agendamento__box__contents__content--confirmacao div p:first-of-type {
+        margin: 0 0 20px 0;
+    }
+
+    .pre-agendamento__box__contents__content--confirmacao div p:last-of-type {
+        margin: 20px 0 0 0;
+    }
+
+    .pre-agendamento__box__contents__content--confirmacao div p,
+    .pre-agendamento__box__contents__content--confirmacao div p * {
+        font: 400 18px/1.2 "Hind", sans-serif;
+    }
+
+    .pre-agendamento__box__contents__content--confirmacao div p strong {
+        font-weight: 600;
+    }
+
+    .pre-agendamento__box__contents__content--confirmacao label {
+        margin: 24px 0 0 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    @media screen and (max-width: 1080px) {
+        .pre-agendamento__box__contents__content--confirmacao label {
+            margin: 20px 0 0 0;
+        }
+    }
+
+    .pre-agendamento__box__contents__content--confirmacao label input {
+        display: block;
+        margin: 0 12px 0 0;
+    }
+
+    .pre-agendamento__box__contents__content--confirmacao label span {
+        padding: 3px 0 0 0;
+        font: 400 15px/1 "Hind", sans-serif;
+    }
+
+    .pre-agendamento__box__contents__content--confirmacao label span a {
+        text-decoration: underline;
+        font-weight: 600;
+    }
+
+    .pre-agendamento__box__contents__content .selectize-control .selectize-input::before,
+    .pre-agendamento__box__contents__content .selectize-control .selectize-input::after {
+        display: none;
+    }
+
+    .pre-agendamento__box__contents__content .selectize-control .selectize-dropdown {
+        background: #F3F3F3;
+        border-radius: 10px;
+        padding: 12px 8px;
+        -webkit-box-shadow: unset;
+        box-shadow: unset;
+        max-height: 240px;
+        overflow-y: auto;
+        box-shadow: unset;
+        border: unset;
+        margin: 2px 0 0 0;
+    }
+
+    @media screen and (max-width: 1080px) {
+        .pre-agendamento__box__contents__content .selectize-control .selectize-dropdown {
+            position: relative;
+            top: unset !important;
+            margin: 2px 0 0 0;
+            max-height: 240px;
+        }
+
+        .pre-agendamento__box__contents__content .selectize-control .selectize-dropdown .selectize-dropdown-content {
+            max-height: initial;
+        }
+    }
+
+    .pre-agendamento__box__contents__content .selectize-control .selectize-dropdown .option {
+        background: unset;
+        padding: 10px 20px 8px 20px;
+        border-radius: 1000px;
+        color: #646567;
+        font: 600 18px/1 "Hind", sans-serif;
+        -webkit-transition: 200ms ease;
+        transition: 200ms ease;
+    }
+
+    .pre-agendamento__box__contents__content .selectize-control .selectize-dropdown .option .highlight {
+        background: unset;
+        color: #646567;
+        -webkit-transition: 200ms ease;
+        transition: 200ms ease;
+    }
+
+    .pre-agendamento__box__contents__content .selectize-control .selectize-dropdown .option:hover {
+        background: #6C1F77;
+        color: #FFFFFF;
+    }
+
+    .pre-agendamento__box__contents__content .selectize-control .selectize-dropdown .option:hover .highlight {
+        color: #FFFFFF;
+    }
+
+    .pre-agendamento__box__final {
+        display: none;
+    }
+
+    .pre-agendamento__box__final.active {
+        display: block;
+    }
+
+    .pre-agendamento__box__final h2 {
+        text-align: center;
+        margin: 0 0 40px 0;
+        font: 700 25px/1.2 "Hind", sans-serif;
+    }
+
+    @media screen and (max-width: 1080px) {
+        .pre-agendamento__box__final h2 {
+            text-align: left;
+            padding: 96px 0 0 0;
+            margin: 0;
+            font-size: 20px;
+        }
+    }
+
+    .pre-agendamento__box__final p {
+        font: 400 22px/1.2 "Hind", sans-serif;
+    }
+
+    .pre-agendamento__box__final p:not(:last-of-type) {
+        margin: 0 0 24px 0;
+    }
+
+    @media screen and (max-width: 1080px) {
+        .pre-agendamento__box__final p {
+            font-size: 20px;
+        }
+    }
+
+    .pre-agendamento__box__final footer {
+        margin: 64px 0 0 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+
+    @media screen and (max-width: 1080px) {
+        .pre-agendamento__box__final footer {
+            display: block;
+        }
+    }
+
+
+
+    @media screen and (max-width: 1080px) {
+        .pre-agendamento__box__final footer aside:first-of-type {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: flex-start;
+            margin: 0 0 40px 0;
+        }
+    }
+
+    .pre-agendamento__box__final footer aside:first-of-type article {
+        margin: 0 40px 0 0;
+    }
+
+    .pre-agendamento__box__final footer aside:first-of-type article h6 {
+        text-transform: uppercase;
+        font: 400 11px/1 "Hind", sans-serif;
+        margin: 0 0 8px 0;
+    }
+
+    .pre-agendamento__box__final footer aside:first-of-type article h3 {
+        font: 400 22px/1 "Hind", sans-serif;
+        color: #6C1F77;
+    }
+
+    .pre-agendamento__box__final footer aside:first-of-type .button {
+        font-size: 15px;
+        padding: 2px 14px 0 14px;
+        border-radius: 8px;
+        height: 36px;
+        letter-spacing: 0;
+    }
+
+    @media screen and (max-width: 1080px) {
+        .pre-agendamento__box__final footer aside:first-of-type .button {
+            width: auto;
+            margin: 20px 0 0 0;
+        }
+    }
+
+    .pre-agendamento__box__final footer aside:last-of-type h5 {
+        font: 400 16px/1 "Hind", sans-serif;
+        margin: 0 0 10px 0;
+    }
+
+    .pre-agendamento__box__final footer aside:last-of-type div {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .pre-agendamento__box__final footer aside:last-of-type div a {
+        display: block;
+        -webkit-transition: 400ms ease;
+        transition: 400ms ease;
+    }
+
+    .pre-agendamento__box__final footer aside:last-of-type div a:hover {
+        opacity: .8;
+    }
+
+    .pre-agendamento__box__final footer aside:last-of-type div a:not(:last-of-type) {
+        margin: 0 14px 0 0;
+    }
+
+    @media screen and (max-width: 480px) {
+        .pre-agendamento {
+            min-height: 80vh;
+            background: #E5E5E5 url(https://cdn1-originals.webdamdb.com/13725_134915306?cache=-62169955622&response-content-disposition=inline;filename=bg-mob_0_0.png&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9jZG4xLW9yaWdpbmFscy53ZWJkYW1kYi5jb20vMTM3MjVfMTM0OTE1MzA2P2NhY2hlPS02MjE2OTk1NTYyMiZyZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPWlubGluZTtmaWxlbmFtZT1iZy1tb2JfMF8wLnBuZyIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MjE0NzQxNDQwMH19fV19&Signature=FR2DF73yDIa2Qv0igul0myBPTPxwLEPLtoCYuSY7A0VAQScBfxMsTgRF7Grdwhv8D9MuL1y7aCvXA34H0x-OvlVGjxw~CuwMDPcUQQSbJhIIs9oP2gEq0Blsop6ZrvPp70NmhoNRczb8wMujAVJ2QVq-60yaBSt-I~L6XuWeeR8Ht50GIO2HfWUtuucb0evRNJVFBCXNszDyUhhxiFsCEbgzKeGUWPYofEcaWF4tfh1LwkKxZI9oiXH~HgKOjmcN3TN1j2yg9K~BnEM5QvLhIHwQT0dsc8nyMnKSCDT~FEjAh3SYe0sfD-0qBP3Tj-a24wLIKtpknPHeW8YcRG-BlQ__&Key-Pair-Id=APKAI2ASI2IOLRFF2RHA) 0 100%/contain no-repeat;
+        }
+
+        .pre-agendamento__header {
+            height: 80vh;
+        }
+    }
+
+    .label-birth {
+        font-size: 15px;
+        color: #aeafaf;
+        font-weight: 400;
+        position: absolute;
+        top: 13.8rem;
+        right: 24.5rem;
+    }
+
+    @media screen and (max-width: 1080px) {
+
+        .label-birth {
+            font-size: 15px;
+            color: #aeafaf;
+            font-weight: 400;
+            position: relative;
+            top: 0;
+            right: 0;
+        }
+    }
+</style>
+<style type="text/css">
+    .popup {
+
+        width: 100%;
+        height: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: none;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        padding: 40px 20px;
+        z-index: 9999999999;
+        -webkit-transition: 300ms ease;
+        transition: 300ms ease;
+
+    }
+
+    .popup.close {
+        opacity: 0;
+        display: none;
+    }
+
+    .popup.open {
+        display: flex;
+    }
+
+    .popup__container {
+        position: relative;
+        max-height: 96vh;
+        width: 50%;
+        background: #646567;
+    }
+
+    .popup__container p {
+        color: #fff;
+        padding: 30px;
+    }
+
+    .popup__container button {
+        position: absolute;
+        top: 0;
+        right: 50%;
+        cursor: pointer;
+        transform: translateY(-100%);
+        color: #FFFFFF;
+        font: 400 24px/1 sans-serif;
+        background: unset;
+    }
+
+
+    @media screen and (max-width: 780px) {
+        .popup__container {
+
+            width: 65%;
+
+        }
+
+        .popup__container p {
+            font-size: 16px;
+        }
+
+    }
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/js/standalone/selectize.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+<script>
+    // PLUGIN SELECTIZE
+
+    $(document).ready(function () {
+
+
+        $('#especialidade').selectize({
+            plugins: ["remove_button"],
+            placeholder: "Digite a especialidade",
+            // allowEmptyOption: true
+            onChange: function (value) {
+                $("#especialidade-selectized").attr("placeholder", "Clique aqui para selecionar");
+            }
+        });
+
+
+        $("#convenio").selectize({
+            maxItems: 1,
+            onChange: function (value) {
+                $("#convenio-selectized").attr("placeholder", "Clique aqui para selecionar");
+            }
+        });
+
+        $("#tipoExame").selectize({
+            plugins: ["remove_button"],
+            placeholder: "Digite o tipo de exame",
+            onChange: function (value) {
+                $("#tipoExame-selectized").attr("placeholder", "Clique aqui para selecionar");
+            }
+        });
+
+        // FORM
+        let current = 0;
+        const initBtn = document.querySelector("[data-init]");
+        const box = document.querySelector(".pre-agendamento__box");
+        const boxContents = document.querySelector(".pre-agendamento__box__contents");
+        const contents = document.querySelectorAll(".pre-agendamento__box__contents__content");
+        const contentNecessidade = document.querySelector(".pre-agendamento__box__contents__content--necessidade");
+        const contentConvenio = document.querySelector(".pre-agendamento__box__contents__content--convenio");
+        const contentDados = document.querySelector(".pre-agendamento__box__contents__content--dados");
+        const contentContato = document.querySelector(".pre-agendamento__box__contents__content--horario-contato");
+        const contentConfirmacao = document.querySelector(".pre-agendamento__box__contents__content--confirmacao");
+        const boxFinal = document.querySelector(".pre-agendamento__box__final");
+        const inptsNecessidade = document.querySelectorAll("input[name='necessidade']");
+        const cntntConsulta = document.querySelector(".pre-agendamento__box__contents__content--necessidade__consulta");
+        const cntntExame = document.querySelector(".pre-agendamento__box__contents__content--necessidade__exame");
+        const textConsulta = document.querySelector("[data-consulta]");
+        const textExame = document.querySelector("[data-exame]");
+        const legendConsulta = "<strong>Consulta:</strong>";
+        const legendExame = "<strong>Exame:</strong>";
+        const inptFile = document.querySelector("input[name='exameUpload']");
+        const form = document.querySelector("#form");
+        const nome = document.querySelector("#nome");
+        const cpf = document.querySelector("#cpf");
+        const email = document.querySelector("input[type='email']");
+        const tel = document.querySelector("input[type='tel']");
+        const dataNascimento = document.querySelector("#dataNascimento");
+        const inptsReq = document.querySelectorAll(".pre-agendamento__box__contents__content--dados input[required]");
+        const avisoDados = document.querySelector("[data-aviso='dadosPessoais']");
+        const next = document.querySelector("[data-next]");
+        const back = document.querySelector("[data-prev]");
+        let respostas = {
+            necessidade: "",
+            arquivoExame: "",
+            exame: [],
+            especialidades: [],
+            convenio: "",
+            dadosPessoais: {
+                nome: "",
+                email: "",
+                cpf: "",
+                tel: "",
+                dataNascimento: ""
+            },
+            horarioContato: [],
+            receberMensagemWhatsapp: false
+        };
+        let objEnvSf = {};
+        let utm_campaign = '';
+        let utm_medium = '';
+        let utm_source = '';
+
+        initBtn.addEventListener("click", e => {
+            e.currentTarget.style.display = "none";
+            box.style.display = "block";
+            contents[0].classList.add("active");
+        });
+
+        form.addEventListener("submit", e => {
+            e.preventDefault();
+
+
+            $.ajax({
+                url: 'https://tools.l0gik.com.br/americas/salesforce.php/',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                type: "POST",
+                data: objEnvSf,
+                success: function (result) {
+                    console.log(result);
+
+
+                    boxContents.style.display = "none";
+                    boxFinal.style.display = "block";
+                },
+                error: function () {
+                    console.log("error");
+                }
+            });
+
+
+            boxContents.style.display = "none";
+            boxFinal.style.display = "block";
+        });
+
+        next.addEventListener("click", () => {
+            current++;
+
+            if (contentNecessidade.classList.contains("active")) {
+                valEspecialidadeExame();
+            }
+            //{
+            // const inptSelectedNecessidade = document.querySelector("input[name='necessidade']:checked");
+            //  if(inptSelectedNecessidade.value === "Exame") valExame();
+            //  else valEspecialidade();
+            //}
+            if (contentConvenio.classList.contains("active")) valConvenio();
+            if (contentDados.classList.contains("active")) valInputs();
+            if (contentContato.classList.contains("active")) valContato();
+
+            if (current === contents.length - 2) next.textContent = "Enviar";
+
+            if (current === contents.length - 1) {
+                next.setAttribute("type", "submit");
+                next.textContent = "Confirmar";
+            }
+
+            if (current > contents.length - 1) return;
+
+            displayContent();
+
+            if (contentConfirmacao.classList.contains("active")) {
+                const inptSelectedNecessidade = document.querySelector("input[name='necessidade']:checked");
+                getNecessidade();
+                //if(inptSelectedNecessidade.value === "Exame")
+                getExame();
+                //else
+                getEspecialidades();
+
+                getConvenio();
+                getDados();
+                getHourContact();
+
+                if (getCookie("__utmzz")) {
+                    var utms = getCookie("__utmzz");
+                    var utmsA = utms.split('|');
+                    var utmsFinal = [];
+                    utmsA.forEach(function (el) {
+                        var splitedEl = el.split('=');
+                        utmsFinal[splitedEl[0]] = splitedEl[1];
+                    })
+
+                    utm_campaign = utmsFinal['utmccn'];
+                    utm_medium = utmsFinal['utmcmd'];
+                    utm_source = utmsFinal['utmcsr'];
+                }
+
+                let respPedidoMedS = ''
+
+                if (respostas.arquivoExame == '') {
+                    respPedidoMedS = 1;
+                } else {
+                    respPedidoMedS = 0;
+                }
+
+
+                objEnvSf = {
+                    'orgid': '00D1U000001AxA4',
+                    'retURL': '',
+                    'CRM_URLWebToCase__c': 'agendamento',
+                    'CRM_SiglaDoHospital__c': '',
+                    'recordType': '0126Q000000p6HVQAY',
+                    'CRM_QualAtendimento__c': 'Pré-Agendamento',
+                    'priority': "Média",
+                    'name': respostas.dadosPessoais.nome,
+                    'CRM_WebCPF__c': respostas.dadosPessoais.cpf,
+                    'email': respostas.dadosPessoais.email,
+                    'phone': respostas.dadosPessoais.tel,
+                    '00N6Q000003mhG0': respostas.convenio,
+                    '00N6Q000003mhFy': respostas.especialidades.toString(),
+                    '00N6Q000003mhGL': respPedidoMedS,
+                    '00N6Q000003mhG5': respostas.exame.toString(),
+                    '00N6Q000003mhG6': respostas.arquivoExame,
+                    '00N6Q000003mhFx': 1,
+                    '00N6Q000003mpNj': 'ID_GA',
+                    '00N6Q000003mpNm': utm_source,
+                    '00N6Q000003mpNl': utm_medium,
+                    '00N6Q000003mpNi': utm_campaign,
+                    '00N6Q000003mpNk': respostas.horarioContato.toString()
+                };
+                //console.log(objEnvSf);
+                // console.log(respostas.horarioContato);
+
+                let respPedidoMed = ''
+
+                if (respostas.arquivoExame == '') {
+                    respPedidoMed = 'Não';
+                } else {
+                    respPedidoMed = 'Sim';
+                }
+
+
+
+                dataLayer.push({
+                    'event': 'pre_agendamento_finalizado',
+                    'consulta': respostas.especialidades.toString(),     // variável com o nome da consulta ou consultas
+                    'exame': respostas.exame.toString(),          // variável com o nome do exame ou exames
+                    'pedido_medico': respPedidoMed,  // se for carregado o pedido médico passar "Sim" caso contrario passar "Não"
+                    'convenio': respostas.convenio,    // variável com o nome do convenio selecionado
+                    'periodo': respostas.horarioContato,      // variável com o período selecionado
+                });
+            }
+        });
+
+        back.addEventListener("click", () => {
+            current--;
+
+            if (current < 0) {
+                box.style.display = 'none';
+                initBtn.style.display = 'block';
+                current = 0;
+            }
+
+            displayContent();
+
+        }
+        );
+
+        function displayContent() {
+            contents.forEach((content) => content.classList.remove("active"));
+            contents[current].classList.add("active");
+        }
+
+        // VALIDATIONS
+        inptsReq.forEach(inpt => inpt.addEventListener("input", () => valInputs()));
+
+        function isEmail(email) {
+            return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+        }
+
+        function isPhone(phone) {
+            return /\([1-9]\d\)\s9?\d{4}\d{4}/g.test(phone);
+        }
+
+        function testaCPF(cpf) {
+            if (typeof cpf !== "string") return false;
+            cpf = cpf.replace(/[^\d]+/g, "");
+            if (cpf.length !== 11 || !!cpf.match(/(\d)\1{10}/)) return false;
+            cpf = cpf.split("");
+            const validator = cpf.filter((digit, index, array) => index >= array.length - 2 && digit).map((el) => +el);
+            const toValidate = (pop) =>
+                cpf.filter((digit, index, array) => index < array.length - pop && digit).map((el) => +el);
+            const rest = (count, pop) =>
+                ((toValidate(pop).reduce((soma, el, i) => soma + el * (count - i), 0) * 10) % 11) % 10;
+            return !(rest(10, 2) !== validator[0] || rest(11, 1) !== validator[1]);
+        }
+
+        function valEspecialidadeExame() {
+            const opts = document.querySelectorAll("#especialidade option");
+            const optsExame = document.querySelectorAll("#tipoExame option");
+            if (opts.length === 0 && optsExame.length === 0) {
+                current = 0;
+                document.querySelector("[data-aviso='especialidade']").style.display = "block";
+                document.querySelector("[data-aviso='tipoExame']").style.display = "block";
+            } else {
+                document.querySelector("[data-aviso='tipoExame']").style.display = "none";
+                document.querySelector("[data-aviso='especialidade']").style.display = "none";
+            }
+        }
+
+        //function valExame() {
+        //  const opts = document.querySelectorAll("#tipoExame option");
+        //  if(opts.length === 0) {
+        //       current = 0;
+        //        document.querySelector("[data-aviso='tipoExame']").style.display = "block";
+        //  } else document.querySelector("[data-aviso='tipoExame']").style.display = "none";
+        //if(!inptFile.value) {
+        //    current = 0;
+        //    document.querySelector("[data-aviso='arquivo']").style.display = "block";
+        //} else document.querySelector("[data-aviso='arquivo']").style.display = "none";
+        //}
+
+        function valConvenio() {
+            if (document.querySelector('#cb_particular').checked) {
+                document.querySelector("[data-aviso='convenio']").style.display = "none";
+                //document.querySelector('#convenio').nextElementSibling.style.display = "none";
+            } else {
+                //document.querySelector('#convenio').nextElementSibling.style.display = "block";
+                if (contentConvenio.querySelector(".selectize-input").classList.contains("not-full")) {
+                    current = 1;
+                    document.querySelector("[data-aviso='convenio']").style.display = "block";
+                } else document.querySelector("[data-aviso='convenio']").style.display = "none";
+            }
+        }
+
+        document.querySelector("#cb_particular").addEventListener("change", e => {
+            if (e.target.checked) document.querySelector('#convenio').nextElementSibling.style.display = "none";
+            else document.querySelector('#convenio').nextElementSibling.style.display = "block";
+        });
+
+        document.querySelector("#exameUpload").addEventListener("change", e => {
+            let dataArqSpan = document.querySelector('#UploadImgName');
+            dataArqSpan.innerHTML = document.querySelector('#exameUpload').value.substring(12);
+            document.querySelector(".pre-agendamento__box__contents__content--necessidade__exame").insertBefore(dataArqSpan, document.querySelector("#dataPreSpan"));
+        });
+
+        function valInputs() {
+            if (nome.value === "" || email.value === "" || cpf.value === "" || tel.value === "" || dataNascimento.value === "" || !testaCPF(cpf.value) || !isEmail(email.value) || !isPhone(tel.value)) {
+                current = 2;
+                avisoDados.style.display = "block";
+            } else avisoDados.style.display = "none";
+        }
+
+        function valContato() {
+            const inptsChecked = contentContato.querySelectorAll("section aside input:checked");
+            if (inptsChecked.length === 0) {
+                current = 3;
+                document.querySelector("[data-aviso='horario-contato']").style.display = "block";
+            } else document.querySelector("[data-aviso='horario-contato']").style.display = "none";
+        }
+
+        // GET NECESSIDADE, ESPECIALIDADES E EXAME
+        function getNecessidade() {
+            const opt = contentNecessidade.querySelector("input:checked");
+            respostas.necessidade = opt.value;
+        }
+
+        function getEspecialidades() {
+            const especialidades = cntntConsulta.querySelectorAll("option");
+
+            especialidades.forEach(esp => {
+                respostas.especialidades.push(esp.value);
+            });
+
+            //console.log(respostas.especialidades.length);
+
+            if (respostas.especialidades.length > 0) {
+
+                if (respostas.especialidades.length === 1) {
+                    textConsulta.innerHTML = `${legendConsulta} ${respostas.especialidades.toString()}`;
+                } else if (respostas.especialidades.length === 2) {
+                    textConsulta.innerHTML = `${legendConsulta} ${respostas.especialidades.join(" e ")}`;
+                } else {
+                    const data = [...respostas.especialidades];
+                    const lastEl = data.pop();
+                    textConsulta.innerHTML = `${legendConsulta} ${data.join(", ")} e ${lastEl}`;
+                }
+
+            } else {
+                textConsulta.innerHTML = '';
+            }
+        }
+
+        function getExame() {
+            if (inptFile.value) {
+                let reader = new FileReader();
+                reader.readAsDataURL(inptFile.files[0]);
+                reader.onload = () => objEnvSf.exame = reader.result;
+            }
+            respostas.arquivoExame = inptFile.value;
+
+            const exames = cntntExame.querySelectorAll("option");
+            exames.forEach(ex => {
+                respostas.exame.push(ex.value);
+            });
+
+            // console.log(respostas.exame.length);
+
+            if (respostas.exame.length > 0) {
+
+                if (respostas.exame.length === 1) {
+                    textExame.innerHTML = `${legendExame} ${respostas.exame.toString()}`;
+                } else if (respostas.exame.length === 2) {
+                    textExame.innerHTML = `${legendExame} ${respostas.exame.join(" e ")}`;
+                } else {
+                    const data = [...respostas.exame];
+                    const lastEl = data.pop();
+                    textExame.innerHTML = `${legendExame} ${data.join(", ")} e ${lastEl}`;
+                }
+
+            } else {
+                textExame.innerHTML = '';
+            }
+
+        }
+
+        // GET CONVÊNIO
+        function getConvenio() {
+            const convenio = contentConvenio.querySelector("option");
+            // console.log(convenio.value.length);
+
+            if (convenio.value.length < 1) {
+                respostas.convenio = 'Sem uso de plano'
+            } else {
+                respostas.convenio = convenio.value;
+            }
+
+        }
+
+        // GET DADOS PESSOAIS
+        function getDados() {
+            const
+                nomeEl = document.querySelector("[data-nome]"),
+                emailEl = document.querySelector("[data-email]"),
+                telEl = document.querySelector("[data-tel]"),
+                cpfEl = document.querySelector("[data-cpf]"),
+                dataNascimentoEl = document.querySelector("[data-dataNascimento]"),
+                formatDate = dataNascimento.value.slice(8, 10) + "/" + dataNascimento.value.slice(5, 7) + "/" + dataNascimento.value.slice(0, 4);
+
+            respostas.dadosPessoais.nome = nome.value;
+            respostas.dadosPessoais.email = email.value;
+            respostas.dadosPessoais.cpf = cpf.value;
+            respostas.dadosPessoais.tel = tel.value;
+            respostas.dadosPessoais.dataNascimento = formatDate;
+
+            nomeEl.innerHTML = `<strong>Nome: </strong> ${respostas.dadosPessoais.nome}`;
+            emailEl.innerHTML = `<strong>E-mail: </strong> ${respostas.dadosPessoais.email}`;
+            cpfEl.innerHTML = `<strong>CPF: </strong> ${respostas.dadosPessoais.cpf}`;
+            telEl.innerHTML = `<strong>Telefone: </strong> ${respostas.dadosPessoais.tel}`;
+            dataNascimentoEl.innerHTML = `<strong>Nascimento: </strong> ${formatDate}`;
+        }
+
+        // GET HORÁRIO CONTATO
+        function getHourContact() {
+            const opts = contentContato.querySelectorAll("section aside input:checked");
+            const text = document.querySelector("[data-horarioContato]");
+            const legend = "<strong>Entrar em contato:</strong>";
+            opts.forEach(opt => {
+                respostas.horarioContato.push(opt.value);
+            });
+            if (respostas.horarioContato.length === 1) {
+                text.innerHTML = `${legend} entre ${respostas.horarioContato.toString()}`;
+            } else if (respostas.horarioContato.length === 2) {
+                text.innerHTML = `${legend} entre ${respostas.horarioContato.join(" ou ")}`;
+            } else {
+                const data = [...respostas.horarioContato];
+                const lastEl = data.pop();
+                text.innerHTML = `${legend} entre ${data.join(", ")} ou ${lastEl}`;
+            }
+
+        }
+
+        // CONTENT NECESSIDADE
+        inptsNecessidade.forEach(inpt => {
+            inpt.addEventListener("change", () => {
+                if (inpt.value === "Exame") {
+                    cntntConsulta.style.display = "none";
+                    cntntExame.style.display = "block";
+                } else {
+                    cntntConsulta.style.display = "block";
+                    cntntExame.style.display = "none";
+                }
+            });
+        });
+
+        // MASK PHONE
+        document.querySelector("input[type='tel']").addEventListener("input", (event) => {
+            const maskPhone = event.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,2})(\d{0,7})/);
+            event.target.value = !maskPhone[2] ? maskPhone[1] : '(' + maskPhone[1] + ')' + ' ' + maskPhone[2] + maskPhone[3];
+        });
+
+        // MASK CPF
+
+
+        const masks = {
+            cpf(value) {
+                return value
+                    .replace(/\D+/g, '')
+                    .replace(/(\d{3})(\d)/, '$1.$2')
+                    .replace(/(\d{3})(\d)/, '$1.$2')
+                    .replace(/(\d{3})(\d{1,2})/, '$1-$2')
+                    .replace(/(-\d{2})\d+?$/, '$1')
+            }
+        }
+
+        document.querySelectorAll('input').forEach($input => {
+            const field = $input.dataset.js
+
+            $input.addEventListener('input', e => {
+                e.target.value = masks[field](e.target.value)
+            }, false)
+        })
+
+
+        // CHANGE INPTFILE
+        inptFile.addEventListener("change", () => {
+            if (!inptFile) document.querySelector("[data-aviso='arquivo']").style.display = "block";
+            else document.querySelector("[data-aviso='arquivo']").style.display = "none";
+        });
+
+
+        //GET COOKIES
+        function getCookie(cname) {
+            var name = cname + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var ca = decodedCookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+
+
+
+
+    });
+
+
+
+
+</script>
+<script type="text/javascript">
+
+    const popup = document.querySelector(".popup");
+    const open = document.querySelector(".open");
+    const close = document.querySelector(".popup button");
+
+    open.addEventListener("click", () => {
+        popup.classList.remove("close");
+        popup.classList.add("open");
+        document.documentElement.classList.add("o-hidden");
+    });
+
+    popup.addEventListener("click", () => {
+        popup.classList.remove("open");
+        popup.classList.add("close");
+        document.documentElement.classList.remove("o-hidden");
+    });
+
+
+    close.addEventListener("click", () => {
+        popup.classList.remove("open");
+        popup.classList.add("close");
+        document.documentElement.classList.remove("o-hidden");
+    });
+</script>
